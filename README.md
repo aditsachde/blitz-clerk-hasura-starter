@@ -1,8 +1,16 @@
+# **blitz-clerk-hasura-starter**
+
+This template requires two environment variables set: `CLERK_FRONTEND_API` and `HASURA_GRAPHQL_URL`.
+
+All the prisma functionality has been removed, as has the blitz auth functionality. Pages to require/not require authentication should be set in `core/clerk.tsx` instead of using the functionality built into blitz. The capability to use blitz mutations and queries still exists, but I haven't bothered to hook up the required pieces to authenticate and authorize users signed in with Clerk. If you would like to, you can read more [here](https://blitzjs.com/docs/authorization).
+
+This template uses hasura with the apollo graphql client, with a JWT issued via clerk. This template does end up replacing most of the flagship features of blitz, so I'm not sure if there is a good reason to use blitz over next for this usecase. There are a bunch of small things though, such as the [route manifest](https://blitzjs.com/docs/route-manifest) and recipies that make blitz nice to have.
+
+---
+
 [![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
 
 This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
-
-# **blitz-clerk-hasura-starter**
 
 ## Getting Started
 
